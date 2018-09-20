@@ -51,7 +51,7 @@ class UsersCrawler:
 
     def start(self):
         self.run = True
-        t = threading.Thread(target=self.crawl_feeds, name=None)
+        t = threading.Thread(target=self.crawl_users, name=None)
         self.threads.append(t)
         # set daemon so main thread can exit when receives ctrl-c
         t.setDaemon(True)
